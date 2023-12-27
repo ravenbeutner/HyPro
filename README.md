@@ -489,7 +489,6 @@ Statements (`<statement>`) have the form
 - `if * {<statement>} else {<statement>}`: Nondeterministic branching.
 
 Initially, all variables are assigned the constant `f` vector (of the length specified in the domain in the first line).
-For details on the semantics see [2] and [4].
 
 #### Example
 

@@ -1,0 +1,3 @@
+forall pi. forall pii. exists piii. 
+
+(G ({h @ 0}_pi <-> {h @ 0}_piii)) & (G({l @ 0}_pii <-> {l @ 0}_piii)) & (G({o @ 0}_pii <-> {o @ 0}_piii))

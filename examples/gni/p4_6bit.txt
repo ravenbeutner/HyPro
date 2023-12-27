@@ -1,0 +1,20 @@
+h : 6; 
+l : 6;
+o : 6;
+
+h = *;
+l = *;
+
+if * {
+    if(h[0]) {
+        o = 6 * false;
+    } else {
+        o = 6 * true;
+    }
+} else {
+    if(h[0]) {
+        o = 6 * true;
+    } else {
+        o = 6 * false;
+    }
+}

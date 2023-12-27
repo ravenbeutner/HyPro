@@ -1,0 +1,20 @@
+h : 3; 
+l : 3;
+o : 3;
+
+h = *;
+l = *;
+
+if * {
+    if(h[0]) {
+        o = 3 * false;
+    } else {
+        o = 3 * true;
+    }
+} else {
+    if(h[0]) {
+        o = 3 * true;
+    } else {
+        o = 3 * false;
+    }
+}

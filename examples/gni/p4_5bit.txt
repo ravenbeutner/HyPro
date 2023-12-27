@@ -1,0 +1,21 @@
+h : 5; 
+l : 5;
+o : 5;
+
+
+h = *;
+l = *;
+
+if * {
+    if(h[0]) {
+        o = 5 * false;
+    } else {
+        o = 5 * true;
+    }
+} else {
+    if(h[0]) {
+        o = 5 * true;
+    } else {
+        o = 5 * false;
+    }
+}

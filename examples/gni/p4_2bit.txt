@@ -1,0 +1,20 @@
+h : 2; 
+l : 2;
+o : 2;
+
+h = *;
+l = *;
+
+if * {
+    if(h[0]) {
+        o = 2 * false;
+    } else {
+        o = 2 * true;
+    }
+} else {
+    if(h[0]) {
+        o = 2 * true;
+    } else {
+        o = 2 * false;
+    }
+}

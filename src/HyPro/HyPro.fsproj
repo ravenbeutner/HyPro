@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>6.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Util.fs" />
+    <Compile Include="SolverConfiguration.fs" />
+    <Compile Include="HyperLTL.fs" />
+    <Compile Include="HyperLTLVariants.fs" />
+    <Compile Include="AutomataUtil.fs" />
+    <Compile Include="ProphecyConstruction.fs" />
+    <Compile Include="ConstructParityGame.fs" />
+    <Compile Include="Verify.fs" />
+    <Compile Include="InstanceParsing.fs" />
+    <Compile Include="CommandLineParser.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FParsec" Version="1.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FsOmegaLib\FsOmegaLib.fsproj" />
+    <ProjectReference Include="..\TransitionSystemLib\TransitionSystemLib.fsproj" />
+    <ProjectReference Include="..\ParityGameLib\ParityGameLib.fsproj" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OtherFlags>$(OtherFlags) --warnon:1182</OtherFlags>
+  </PropertyGroup>
+</Project>

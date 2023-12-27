@@ -65,7 +65,7 @@ let verify config (options : AnalysisOptions) (systemMap : Map<TraceVariable, Tr
     config.Logger.LogN $"Constructed initial (prophecy-free) PG with %i{pg.Properties.Count} states in %i{sw.ElapsedMilliseconds}ms"
 
     sw.Restart()
-    let sol = ParityGameLib.ParityGameSolverDirect.solveDirect pg
+    let sol = ParityGameLib.ParityGameSolverOink.solveWithOink config.SolverConfig.MainPath config.SolverConfig.OinkPath pg
     config.Logger.LogN $"Solved PG in %i{sw.ElapsedMilliseconds}ms"
 
     if sol.WinnerMap.[initState] = PlayerZero then 
@@ -143,7 +143,7 @@ let verify config (options : AnalysisOptions) (systemMap : Map<TraceVariable, Tr
 
                     let pg, initState = ConstructParityGame.compileToParityGame config systemMap universalTraceVariables dpa prophecyMap
                     
-                    let sol = ParityGameLib.ParityGameSolverDirect.solveDirect pg
+                    let sol = ParityGameLib.ParityGameSolverOink.solveWithOink config.SolverConfig.MainPath config.SolverConfig.OinkPath pg
 
                     let res = 
                         if sol.WinnerMap.[initState] = PlayerZero then 

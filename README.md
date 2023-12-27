@@ -36,10 +36,11 @@ We require the following dependencies:
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download) (tested with version 8.0.100)
 - [spot](https://spot.lrde.epita.fr/) (tested with version 2.11.6)
+- [oink](https://github.com/trolando/oink)
 
 Install the .NET 8 SDK (see [here](https://dotnet.microsoft.com/en-us/download) for details) and make sure it is installed correctly by running `dotnet --version`.
-Download and build spot (details can be found [here](https://spot.lrde.epita.fr/)). 
-You can place the spot executables in any location of your choosing. 
+Download and build spot (details can be found [here](https://spot.lrde.epita.fr/)) and oink (details can be found [here](https://github.com/trolando/oink)).
+You can place the spot and oink executables in any location of your choosing. 
 To use HyPro you need to provide it with the *absolute* path to spot (see details below).
 
 ### Build HyPro
@@ -63,18 +64,19 @@ app/HyPro --version
 
 ### Connect spot to HyPro
 
-HyPro requires the *autfilt* and *ltl2tgba* tools from the [spot](https://spot.lrde.epita.fr/) library.
+HyPro requires the *autfilt* and *ltl2tgba* tools from the [spot](https://spot.lrde.epita.fr/) library and the [oink](https://github.com/trolando/oink) parity game solver.
 HyPro is designed such that it only needs the *absolute* path to these executables, so they can be installed and placed at whatever locations fits best.
 The absolute paths are specified in a `paths.json` configuration file. 
 This file must be located in the same directory as the HyPro executable. 
 We already provide a template file `app/paths.json` that **needs to be modified**. 
-After having built spot, paste the absolute path to the *autfilt* and *ltl2tgba* executables to the `paths.json` file. 
-For example, if `/usr/bin/autfilt` and `/usr/bin/ltl2tgba` are the *autfilt* and *ltl2tgba* executables, the content of `app/paths.json` should be
+After having built spot and oink, paste the absolute path to the *autfilt* and *ltl2tgba* executables to the `paths.json` file. 
+For example, if `/usr/bin/autfilt`, `/usr/bin/ltl2tgba`, and `/usr/bin/oink` are the *autfilt*, *ltl2tgba*, and *oink* executables, respectively, the content of `app/paths.json` should be
 
 ```json
 {
     "autfilt":"/usr/bin/autfilt",
-    "ltl2tgba":"/usr/bin/ltl2tgba"
+    "ltl2tgba":"/usr/bin/ltl2tgba",
+    "oink":"/usr/bin/oink"
 }
 ```
 

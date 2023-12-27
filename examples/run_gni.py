@@ -119,5 +119,5 @@ for bucket in instances:
         if res == None:
             print('TO')
         else:
-            print('Time: ', res['time'], 'seconds')
+            print('Time: ', res['time'], 's')
     print('========================================================\n')

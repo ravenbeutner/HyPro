@@ -1,6 +1,6 @@
-# HyPro: Prophecy-Based Model Checking for HyperLTL
+# HyPro: Prophecy-Based Verification for HyperLTL
 
-This repository contains **HyPro** (short for either "**Hy**perproperties with **Pro**phecies"), a tool that can verify HyperLTL properties on finite-state systems. 
+This repository contains **HyPro** (short for "**Hy**perproperties with **Pro**phecies"), a tool that can verify HyperLTL properties on finite-state systems. 
 
 Clone this repository and **initialize all submodules** by running 
 
@@ -522,7 +522,7 @@ forall A. forall B. exists C. (G ({h_0}_A <-> {h_0}_C)) & (G({l_0}_B <-> {l_0}_C
 ```
 which always checks the first index in each boolean vector.
 
-For further examples, take a look at the `benchmarks/bp` folder.
+For further examples, take a look at `examples/gni/`.
 
 
 ## References  

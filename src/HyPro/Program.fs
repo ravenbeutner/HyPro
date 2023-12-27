@@ -176,4 +176,4 @@ let main args =
     | e -> 
         printfn "Unexpected Error during the analysis:"
         printfn "%s" e.Message
-        exit -1
+        reraise()

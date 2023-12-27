@@ -23,9 +23,9 @@ type CommandLineArguments =
         {
             InputFiles = []
             ExecMode = ExplicitInstance
-            DebugOutputs = true
+            DebugOutputs = false
 
-            ComputeBisimulation = true
+            ComputeBisimulation = false
             UseProphecies = false 
             UseAllProphecies = false
         }
@@ -54,12 +54,15 @@ let parseCommandLineArguments (args : list<String>) =
                 parseArgumentsRec xs {opt with ExecMode = BooleanProgramInstance}
             | "--debug" -> 
                 parseArgumentsRec xs { opt with DebugOutputs = true}
-            | "--no-bisim" -> 
-                parseArgumentsRec xs { opt with ComputeBisimulation = false}
+            | "--bisim" -> 
+                parseArgumentsRec xs { opt with ComputeBisimulation = true}
             | "--pro" -> 
                 parseArgumentsRec xs { opt with UseProphecies = true}
             | "--all-pro" -> 
                 parseArgumentsRec xs { opt with UseAllProphecies = true; UseProphecies = true}
+            | "--version" -> 
+                printfn "HyPro (Version 1.1)"
+                exit 0
             | s when s.StartsWith("-") -> 
                 Result.Error ("Option " + x + " is not supported" )
             | _ ->

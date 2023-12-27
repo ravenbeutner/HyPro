@@ -25,7 +25,7 @@ See the corresponding paper for details:
 ## Structure 
 
 - `src/` contains the source code of HyPro (written in F#).
-- `benchmarks/` contains a selection of verification benchmarks
+- `examples/` contains a selection of verification benchmarks
 - `app/` is the target folder for the build. The final HyPro executable will be placed here. 
 
 ## Build HyPro

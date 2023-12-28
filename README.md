@@ -19,7 +19,7 @@ HyPro reads a transition system and a HyperLTL property and attempts to verify t
 Fo verification, HyPro employs a game-based interpretation of the verification procress and, if needed, can compute prophecies to ensure compltness.
 See the corresponding paper for details:
 
-> Prophecy Variables for Hyperproperty Verification. Raven Beutner and Bernd Finkbeiner. CSF 2023. [1]
+> Prophecy Variables for Hyperproperty Verification. Raven Beutner and Bernd Finkbeiner. CSF 2022. [1]
 
 
 ## Structure 
@@ -528,4 +528,4 @@ For further examples, take a look at `examples/gni/`.
 
 ## References  
 
-[1] Prophecy Variables for Hyperproperty Verification. Raven Beutner and Bernd Finkbeiner. CSF 2023
+[1] Prophecy Variables for Hyperproperty Verification. Raven Beutner and Bernd Finkbeiner. CSF 2022
